@@ -1,0 +1,35 @@
+CPP_PROJECT_TEMPLATE ICON "@PROJECT_SOURCE_DIR@/resources/cpp.ico"
+
+1 VERSIONINFO
+    FILEVERSION @PROJECT_VERSION_MAJOR@,@PROJECT_VERSION_MINOR@,@PROJECT_VERSION_PATCH@
+    PRODUCTVERSION @PROJECT_VERSION_MAJOR@,@PROJECT_VERSION_MINOR@,@PROJECT_VERSION_PATCH@
+    FILEFLAGSMASK 0x17L
+  #ifdef _DEBUG
+    FILEFLAGS 0x1L  // VS_FF_DEBUG
+  #else
+    FILEFLAGS 0x0L
+  #endif
+    FILEOS 0x40004L // VOS_NT_WINDOWS32
+    FILETYPE 0x1L   // VFT_APP
+    FILESUBTYPE 0x0L
+    BEGIN
+        BLOCK "StringFileInfo"
+        BEGIN
+            BLOCK "040004b0"    // 非特定语言(默认值)
+            // BLOCK "080404b0" // 中文(简体，中国)
+            // BLOCK "040904b0" // 英语(美国)
+            BEGIN
+                VALUE "Comments", "CPP Project Template"
+                VALUE "CompanyName", "CPP Project Template"
+                VALUE "FileDescription", "CPP Project Template"
+                VALUE "LegalCopyright", "Copyright (C) 2022 Yang Guo"
+                VALUE "ProductName", "CPP Project Template"
+                VALUE "ProductVersion", "@PROJECT_VERSION@"
+                VALUE "OriginalFilename" "@PROJECT_NAME@@CMAKE_EXECUTABLE_SUFFIX@"
+            END
+        END
+        BLOCK "VarFileInfo"
+        BEGIN
+            VALUE "Translation", 0x400, 1200 //, 0x804, 1200
+        END
+    END
