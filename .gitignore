@@ -3,4 +3,4 @@ install
 .cache
 .vscode
 *.user
-.DS_Store
+*.DS_Store
